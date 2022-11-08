@@ -1,0 +1,13 @@
+<div class="container">
+  <h1><%= @task.title %></h1>
+  <div class="list-group">
+    <p class="list-group-item">details: <strong><%= @task.details %></strong></p>
+    <p class="list-group-item">completed: <strong><%= @task.completed %></strong></p>
+  </div>
+  <div>
+    <%= link_to "Edit this task", edit_task_path(@task) %>
+  </div>
+  <div>
+    <%= link_to "Back to list", root_path %>
+  </div>
+</div>
