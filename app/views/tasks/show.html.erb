@@ -5,9 +5,7 @@
     <p class="list-group-item">completed: <strong><%= @task.completed %></strong></p>
   </div>
   <div>
-    <%= link_to "Edit this task", edit_task_path(@task) %>
-  </div>
-  <div>
-    <%= link_to "Back to list", root_path %>
+    <%= link_to "Back to list", root_path, class: "btn btn-primary" %>
+    <%= link_to "Edit this task", edit_task_path(@task), class: "btn btn-primary" %>
   </div>
 </div>

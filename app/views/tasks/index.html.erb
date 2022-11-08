@@ -3,12 +3,14 @@
   <div>
     <ul class="list-group">
       <% @tasks.each do |task| %>
-        <li class="list-group-item"><%= link_to task.title, task_path(task) %> -
-        <%= link_to "❌", task_path(task), data: { turbo_method: :delete} %></li>
+        <li class="list-group-item">
+          <%= link_to task.title, task_path(task) %> |
+          <%= link_to "❌", task_path(task), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+        </li>
       <% end %>
     </ul>
   </div>
   <div>
-    <%= link_to "Add a new task", new_task_path %>
+    <%= link_to "Add a new task", new_task_path, class: "btn btn-primary" %>
   </div>
 </div>
